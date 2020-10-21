@@ -9,7 +9,6 @@
 include <Parameters.scad>
 use <HoseConnector.scad>
 
-// set this to a lower value (e.g. 30) while editing.
 $fn = 100;
 
 

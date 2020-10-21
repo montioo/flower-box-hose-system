@@ -9,8 +9,7 @@
 include <Parameters.scad>
 use <HoseConnector.scad>
 
-// set this to a lower value (e.g. 30) while editing.
-$fn = 100;
+$fn = 70;
 
 
 // Creates a watering ring that can be placed at the foot of a plant

@@ -6,7 +6,6 @@
 //  montebaur.tech, github.com/montioo
 //
 
-// set this to a lower value (e.g. 30) while editing.
 $fn = 100;
 
 
