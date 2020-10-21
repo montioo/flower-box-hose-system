@@ -1,0 +1,6 @@
+# .gitignore for flower-box-hose-system
+# Author: Marius Montebaur
+# montebaur.tech, github.com/montioo
+
+# ignore macOS folder display preferences
+.DS_Store
