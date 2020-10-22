@@ -1,5 +1,5 @@
 //
-//  SprinklerRing.scad
+//  SprinklerBar.scad
 //  flower-box-hose-system
 //
 //  Author: Marius Montebaur
