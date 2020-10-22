@@ -41,6 +41,8 @@ module WateringRing(hose_type=0, watering_ring_inner_radius=50/2) {
                 translate([0, 0, port_length]) HoseConnector(hose_type);
             }
         }
+
+        // subtract the inner part, i.e. the pipe for the water and the exit holes
         translate([0, -watering_ring_inner_radius - outer_diameter, 0]) {
             rotate([0, 0, ending_angle]) rotate_extrude(angle=ring_angle) translate([watering_ring_inner_radius + outer_diameter/2 , 0, 0]) circle(d=inner_diameter);
             hole_angle_offset = ring_angle / (hole_count -1);
