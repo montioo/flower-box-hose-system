@@ -1,3 +1,6 @@
+
+![Overview Image](hose-parts-overview.png)
+
 # flower-box-hose-system
 
 A set of 3D printable sprinklers and hose connectors to build an automatic watering system for flower boxes, e.g. on your balcony.
@@ -8,7 +11,7 @@ Author: Marius Montebaur
 
 ## Special print settings
 
-Detailed descriptions on how to adjust the print settings can be found [here](https://montebaur.tech/waterproof_3d-printing.html).
+Detailed descriptions on how to adjust the print settings can be found [here](https://montebaur.tech/projects/waterproof_3d-printing.html).
 
 Summary: To make the components waterproof adjustments to the print setting are necessary (parameter names from Cura)
 - Infill density: `100%`
