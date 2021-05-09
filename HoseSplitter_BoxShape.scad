@@ -73,15 +73,21 @@ module ThreePortBox(hose_type_inlet=0, hose_type_outlet=0, port_length=12, outle
 }
 
 
-// Three port connector for 8mm inner diameter tubes
-difference() {
-    ThreePortBox(2, 1, outlet_spacing=20, port_length=8);
-    // Uncomment this line to see the complete component.
-    // translate([-40, -40, 0]) cube([80, 80, 40]);
-}
+// Three port connector with 8mm inlet and two 6mm outlets.
+// difference() {
+//     ThreePortBox(2, 1, outlet_spacing=20, port_length=8);
+//     // Uncomment this line to see the complete component.
+//     // translate([-40, -40, 0]) cube([80, 80, 40]);
+// }
 
-// Three port connector for 4mm inner diameter tubes
+// Three port connector for 4mm inner diameter tubes.
 // difference() {
 //     ThreePortBox(0, 0, outlet_spacing=12, port_length=6);
 //     // translate([-40, -40, 0]) cube([80, 80, 40]);
 // }
+
+// Three port connector with 6mm inlet and two 4mm outlets.
+difference() {
+    ThreePortBox(1, 0, outlet_spacing=14, port_length=8);
+    // translate([-40, -40, 0]) cube([80, 80, 40]);
+}
