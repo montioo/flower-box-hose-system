@@ -25,6 +25,8 @@ module MultiConnectorY(ports=[[0, 1], [180, 1]], middle_pipe_length=12, sphere_m
     // Creates a water intersection in arbitrary angles
 
     pipe_length = middle_pipe_length;
+    max_outer_dia = max( [ for (port = ports) hc_pipe_outer_dia[port[1]] ] );
+    max_inner_dia = max( [ for (port = ports) hc_pipe_inner_dia[port[1]] ] );
 
     difference() {
         union() {
@@ -36,13 +38,17 @@ module MultiConnectorY(ports=[[0, 1], [180, 1]], middle_pipe_length=12, sphere_m
                     cylinder(h=pipe_length, d=hc_pipe_outer_dia[hose_type]);
                 }
             }
-            sphere(d=hc_pipe_outer_dia[1]*sphere_multiplier);
+            sphere(d=max_outer_dia*sphere_multiplier);
         }
 
         for (port = ports) {
             angle = port[0];
             hose_type = port[1];
-            rotate([-90, 0, angle]) translate([0, 0, -0.01]) cylinder(h=pipe_length+0.02, d=hc_pipe_inner_dia[hose_type]);
+            inner_dia = hc_pipe_inner_dia[hose_type];
+            rotate([-90, 0, angle]) translate([0, 0, -0.01]) {
+                cylinder(h=pipe_length+0.02, d=inner_dia);
+                cylinder(h=max_outer_dia/3, d2=inner_dia, d1=max_inner_dia);
+            }
         }
     }
 }
