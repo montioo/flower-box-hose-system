@@ -16,7 +16,7 @@ $fn = 70;
 // @param hose_type: Type of hose to use for all connectors. See Parameters.scad for more info.
 // @param watering_ring_inner_radius: The inner radius of the whole ring.
 module WateringRing(hose_type=0, watering_ring_inner_radius=50/2) {
-    
+
     ring_angle = 225;  // angular size of the ring
     port_length = 4;  // additional length of the hose connector
     hole_count = 6;  // number of sprinkler holes
@@ -34,7 +34,7 @@ module WateringRing(hose_type=0, watering_ring_inner_radius=50/2) {
                 for (i = [-1, 1]) {
                     rotate([0, 0, i * ending_angle]) translate([i * (watering_ring_inner_radius + outer_diameter/2), 0, 0]) sphere(d=outer_diameter);
                 }
-                
+
             }
             rotate([-90, 0, 0]) union() {
                 translate([0, 0, -outer_diameter/2]) cylinder(d1=outer_diameter, d2=hc_pipe_outer_dia[hose_type], h=port_length + outer_diameter/2);

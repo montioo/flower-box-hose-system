@@ -17,13 +17,19 @@ Summary: To make the components waterproof adjustments to the print setting are 
 - Infill density: `100%`
 - Wall thickness: 4 lines
 - Flow (or extrusion multiplier): `108%`. Tells the printer to use more filament than necessary to close gaps between neighboring filament lines.
+  - If your slicer is capable of setting different values for the flow used for the object and the support material, stick with 100% flow for the support material. Otherwise, removing the support will be more difficult.
 - Printing Temperature: `215°C`. A bit hotter than usual to make the filament flow better.
-
+- Try to orient the objects on the print bet such that the water flow direction is along the z axis ([explanation](https://montebaur.tech/projects/waterproof_3d-printing.html#object-orientation)).
 
 ## Changelog
 
+### 2021-05-11:
+- New wall connector that allows mounting a hose extender on a wall, e.g. of a plastic enclosure containing magnetic valves.
+
+![New wall connector](images/hose-wall-connector.png)
+
 ### 2021-05-09:
-- Added parameters for hoses with 6mm inner diameter ([`Parameters.scad`](Parameters.scad))
-- Updated box shaped splitter ([`HoseSplitter_BoxShape.scad`](HoseSplitter_BoxShape.scad)) to accept different inlet and outlet diameters and added numbers on the housing.
+- Added parameters for hoses with 6mm inner diameter (`Parameters.scad`)
+- Updated box shaped splitter (`HoseSplitter_BoxShape.scad`) to accept different inlet and outlet diameters and added numbers on the housing.
 
 ![New box shaped connectors with labels for inner hose diameters.](images/new_labeling.png)

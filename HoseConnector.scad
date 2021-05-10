@@ -33,9 +33,3 @@ module HoseConnector(hose_type=0) {
 
 // Example for a connector modeled after hose_type 0:
 HoseConnector(0);
-
-
-
-
-
-
