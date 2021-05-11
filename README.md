@@ -24,12 +24,13 @@ Summary: To make the components waterproof adjustments to the print setting are 
 ## Changelog
 
 ### 2021-05-11:
+- Added hose end cap.
 - New wall connector that allows mounting a hose extender on a wall, e.g. of a plastic enclosure containing magnetic valves.
 
-![New wall connector](images/hose-wall-connector.png)
+![New wall connector](images/wall-con_end-cap.png)
 
 ### 2021-05-09:
 - Added parameters for hoses with 6mm inner diameter (`Parameters.scad`)
 - Updated box shaped splitter (`HoseSplitter_BoxShape.scad`) to accept different inlet and outlet diameters and added numbers on the housing.
 
-![New box shaped connectors with labels for inner hose diameters.](images/new_labeling.png)
+![New box shaped connectors with labels for inner hose diameters.](images/hose-splitter-label.png)
